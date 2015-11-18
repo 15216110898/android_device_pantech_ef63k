@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export VENDOR=pantech
-export DEVICE=ef63k
+export DEVICE=ef63-common
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
@@ -116,7 +116,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter ef63k,\$(TARGET_DEVICE)),)
+ifneq (\$(filter ef63k ef63l ef63s,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.location
